@@ -1,0 +1,13 @@
+# Prettier friendly markdownlint config (all formatting rules disabled)
+
+MD026: false # Trailing punctuation in heading
+MD001: false # Header levels should only increment by one level at a time
+MD033: false # No inline HTML
+MD041: false # First line in a file should be a top-level heading
+MD053: false # Link text should not be the same as the link URL
+MD014: false # Dollar signs used before commands without showing output
+MD034: false # Bare URL used
+MD038: false # Code block style
+MD052: false # List style
+
+extends: markdownlint/style/prettier

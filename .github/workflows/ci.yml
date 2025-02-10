@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  compile_and_verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Rust cache
+        uses: Swatinem/rust-cache@v2
+
+      - name: Install mdbook
+        run: |
+          mkdir bin
+          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.42/mdbook-v0.4.42-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
+          echo "$(pwd)/bin" >> ${GITHUB_PATH}
+
+      - name: Install mdbook-i18n-helpers
+        run: |
+          cargo install mdbook-i18n-helpers --locked --version 0.3.4
+
+      - name: Install asdf & tools
+        uses: asdf-vm/actions/install@v3
+
+      - name: Set default scarb version
+        run: asdf global scarb $(cat .tool-versions | grep scarb | cut -d ' ' -f 2)
+
+      - name: Set default starknet-foundry version
+        run: asdf global starknet-foundry $(cat .tool-versions | grep starknet-foundry | cut -d ' ' -f 2)
+
+      - name: Add binary paths to PATH
+        run: |
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+        shell: bash
+
+      - name: Build book (English)
+        run: mdbook build -d book
+
+      - name: Install cairo-listings
+        run: cargo install --git https://github.com/enitrat/cairo-listings --locked
+        shell: bash
+
+      - name: Run cairo-listings and generate summary
+        run: cairo-listings verify >> $GITHUB_STEP_SUMMARY
+        shell: bash
+
+  typos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: crate-ci/typos@master
