@@ -6,10 +6,10 @@ The trait requires only a method to be defined for the `next` element, which may
 
 As a point of convenience for common situations, the `for` construct turns some collections into iterators using the [`.into_iter()`][intoiter] method.
 
-<!-- TODO: fix `take` and `skip` methods -->
+<!-- TODO: uncommend `skip` methods -->
 
 ```cairo,editable
-{{#include ../../listings/trait_listing/iter/src/lib.cairo:all}}
+{{#include ../../listings/trait_listing/iter/src/lib.cairo}}
 ```
 
 [intoiter]: https://docs.swmansion.com/scarb/corelib/core-iter-traits-iterator-IntoIterator.html

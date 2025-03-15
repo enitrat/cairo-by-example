@@ -25,7 +25,7 @@ However, `@T` is allowed.
 
 In the following example, try swapping the usage of `Fn` and `FnOnce` to see what happens:
 
-> Note: Cairo 2.10 provides an experimental feature allowing you to specify the associated type of trait, using `experimental-features = ["associated_item_constraints"]` in your `Scarb.toml`.
+> Note: Cairo 2.11 provides an experimental feature allowing you to specify the associated type of trait, using `experimental-features = ["associated_item_constraints"]` in your `Scarb.toml`.
 
 ```cairo,editable
 {{#include ../../../listings/functions/closures/input_parameters/src/lib.cairo}}

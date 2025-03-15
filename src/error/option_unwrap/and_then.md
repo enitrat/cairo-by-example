@@ -13,7 +13,7 @@ Using `map()` instead of `and_then()` would have given an
 `Option<Option<Food>>`, which is an invalid type for `eat()`.
 
 ```cairo,editable
-{{#include ../../../listings/error/option_unwrap/and_then/src/lib.cairo:main}}
+{{#include ../../../listings/error/option_unwrap/and_then/src/lib.cairo}}
 ```
 
 ### See also:

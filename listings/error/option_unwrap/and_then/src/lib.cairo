@@ -1,4 +1,3 @@
-//ANCHOR:main
 #[derive(Copy, Drop, Debug)]
 enum Food {
     CordonBleu,
@@ -62,16 +61,4 @@ fn main() {
     eat(cordon_bleu, Day::Monday);
     eat(steak, Day::Tuesday);
     eat(sushi, Day::Wednesday);
-}
-
-//ANCHOR_END:main
-
-#[generate_trait]
-impl OptionTraitExtImpl<T> of OptionTraitExt<T> {
-    fn flatten(self: Option<Option<T>>) -> Option<T> {
-        match self {
-            Some(x) => x,
-            None => None,
-        }
-    }
 }
