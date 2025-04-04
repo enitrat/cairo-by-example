@@ -53,4 +53,4 @@ Now let's begin!
 [cairo]: https://www.cairo-lang.org/
 [install]: https://book.cairo-lang.org/ch01-01-installation.html
 [book]: https://book.cairo-lang.org/
-[home]: https://github.com/enitrat/cairo-by-example
+[home]: https://github.com/cairo-book/cairo-by-example
