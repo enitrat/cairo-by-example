@@ -25,7 +25,7 @@ generic cases.
 This is not a problem though because for any new _container_ type which is
 _not_ generic, `fmt::Display` can be implemented.
 
-```cairo
+```cairo,editable
 {{#include ../../../listings/hello/print/print_display/src/lib.cairo:main}}
 ```
 
