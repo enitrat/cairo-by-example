@@ -29,7 +29,7 @@ line with a second `println!` macro so that the output shows:
 
 ```text
 Hello World!
-I'm a Caironaute!
+I'm a Caironaut!
 ```
 
 [macros]: macros.md
