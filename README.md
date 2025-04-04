@@ -4,7 +4,7 @@ Learn Cairo with examples (Live code editor included)
 
 ## Using
 
-If you'd like to read Cairo by Example, you can visit <https://cairo-lang.org/cairo-by-example/>
+If you'd like to read Cairo by Example, you can visit <https://docs.cairo-lang.org/cairo-by-example/>
 to read it online.
 
 If you'd like to read it locally, [install Rust], and then:
