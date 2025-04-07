@@ -4,8 +4,8 @@ description = "Cairo by Example (CBE) is a collection of runnable examples that 
 author = "The Cairo Community"
 
 [output.html]
-git-repository-url = "https://github.com/cairo-lang/cairo-by-example"
-edit-url-template = "https://github.com/cairo-lang/cairo-by-example/edit/main/{path}"
+git-repository-url = "https://github.com/cairo-book/cairo-by-example"
+edit-url-template = "https://github.com/cairo-book/cairo-by-example/edit/main/{path}"
 additional-css = ["theme/css/last-changed.css", "theme/css/chat.css"]
 additional-js = [
   "theme/js/index.mjs",

@@ -10,7 +10,7 @@ to read it online.
 If you'd like to read it locally, [install Rust], and then:
 
 ```bash
-git clone https://github.com/cairo-lang/cairo-by-example
+git clone https://github.com/cairo-book/cairo-by-example
 cd cairo-by-example
 cargo install mdbook
 mdbook build
