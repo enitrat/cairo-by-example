@@ -15,16 +15,16 @@ enum Day {
 // We don't have the ingredients to make Sushi.
 fn have_ingredients(food: Food) -> Option<Food> {
     match food {
-        Food::Sushi => Option::None,
-        _ => Option::Some(food),
+        Food::Sushi => None,
+        _ => Some(food),
     }
 }
 
 // We have the recipe for everything except Cordon Bleu.
 fn have_recipe(food: Food) -> Option<Food> {
     match food {
-        Food::CordonBleu => Option::None,
-        _ => Option::Some(food),
+        Food::CordonBleu => None,
+        _ => Some(food),
     }
 }
 
@@ -32,8 +32,8 @@ fn have_recipe(food: Food) -> Option<Food> {
 // We can represent the logic with a chain of `match`es:
 fn cookable_v1(food: Food) -> Option<Food> {
     match have_recipe(food) {
-        Option::None => Option::None,
-        Option::Some(food) => have_ingredients(food),
+        None => None,
+        Some(food) => have_ingredients(food),
     }
 }
 
@@ -50,8 +50,8 @@ fn cookable_v2(food: Food) -> Option<Food> {
 
 fn eat(food: Food, day: Day) {
     match cookable_v3(food) {
-        Option::Some(food) => println!("Yay! On {:?} we get to eat {:?}.", day, food),
-        Option::None => println!("Oh no. We don't get to eat on {:?}?", day),
+        Some(food) => println!("Yay! On {:?} we get to eat {:?}.", day, food),
+        None => println!("Oh no. We don't get to eat on {:?}?", day),
     }
 }
 

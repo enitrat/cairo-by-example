@@ -3,8 +3,8 @@
 fn give_adult(drink: Option<ByteArray>) {
     // Specify a course of action for each case.
     match drink {
-        Option::Some(inner) => println!("{}? How nice.", inner),
-        Option::None => println!("No drink? Oh well."),
+        Some(inner) => println!("{}? How nice.", inner),
+        None => println!("No drink? Oh well."),
     }
 }
 
@@ -21,16 +21,16 @@ fn drink(drink: Option<ByteArray>) {
 }
 
 fn main() {
-    let water = Option::Some("water");
-    let lemonade = Option::Some("lemonade");
-    let void = Option::None;
+    let water = Some("water");
+    let lemonade = Some("lemonade");
+    let void = None;
 
     give_adult(water);
     give_adult(lemonade);
     give_adult(void);
 
-    let coffee = Option::Some("coffee");
-    let nothing = Option::None;
+    let coffee = Some("coffee");
+    let nothing = None;
 
     drink(coffee);
     drink(nothing);

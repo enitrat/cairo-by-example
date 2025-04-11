@@ -4,7 +4,7 @@ fn next_birthday(current_age: Option<u8>) -> Option<ByteArray> {
     // If `current_age` is `Some`, the inner `u8` value + 1
     // gets assigned to `next_age`
     let next_age: u8 = current_age? + 1;
-    Option::Some(format!("Next year I will be {}", next_age))
+    Some(format!("Next year I will be {}", next_age))
 }
 //ANCHOR_END:intro
 
@@ -38,16 +38,12 @@ impl PersonImpl of PersonTrait {
 
 fn main() {
     let p = Person {
-        job: Option::Some(
-            Job {
-                phone_number: Option::Some(
-                    PhoneNumber { area_code: Option::Some(61), number: 439222222 },
-                ),
-            },
+        job: Some(
+            Job { phone_number: Some(PhoneNumber { area_code: Some(61), number: 439222222 }) },
         ),
     };
 
-    assert!(p.work_phone_area_code() == Option::Some(61));
+    assert!(p.work_phone_area_code() == Some(61));
 }
 //ANCHOR_END:main
 

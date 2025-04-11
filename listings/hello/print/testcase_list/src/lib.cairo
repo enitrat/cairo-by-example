@@ -13,27 +13,15 @@ impl ListDisplay of fmt::Display<List> {
 
         write!(f, "[")?;
 
-        // Iterate over `v` in `array_span` while enumerating the iteration
-        // count in `count`.
-        let mut count = 0;
-        loop {
-            if count >= array_span.len() {
-                break Ok(());
-            }
+        // Iterate over `i` elements in `array_span`.
+        for i in 0..array_span.len() {
             // For every element except the first, add a comma.
             // Use the ? operator to return on errors.
-            if count != 0 {
-                match write!(f, ", ") {
-                    Ok(_) => {},
-                    Err(e) => { break Err(e); },
-                }
+            if i != 0 {
+                write!(f, ", ")?;
             }
-            match write!(f, "{}", *array_span[count]) {
-                Ok(_) => {},
-                Err(e) => { break Err(e); },
-            }
-            count += 1;
-        }?;
+            write!(f, "{}", *array_span[i])?;
+        }
 
         // Close the opened bracket and return a fmt::Result value.
         write!(f, "]")

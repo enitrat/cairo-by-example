@@ -5,21 +5,21 @@ struct ParseIntError {
 
 fn char_to_number(c: ByteArray) -> Result<u8, ParseIntError> {
     if c.len() != 1 {
-        return Result::Err(ParseIntError { message: "Expected a single character" });
+        return Err(ParseIntError { message: "Expected a single character" });
     }
     let byte = c[0];
-    Result::Ok(byte)
+    Ok(byte)
 }
 
 fn main() {
     let result = char_to_number("a");
     match result {
-        Result::Ok(number) => println!("Number: 0x{:x}", number),
-        Result::Err(error) => println!("Error: {}", error.message),
+        Ok(number) => println!("Number: 0x{:x}", number),
+        Err(error) => println!("Error: {}", error.message),
     }
     let result = char_to_number("ab");
     match result {
-        Result::Ok(number) => println!("Number: 0x{:x}", number),
-        Result::Err(error) => println!("Error: {}", error.message),
+        Ok(number) => println!("Number: 0x{:x}", number),
+        Err(error) => println!("Error: {}", error.message),
     }
 }

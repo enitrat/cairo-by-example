@@ -24,8 +24,8 @@ struct Cooked {
 // Otherwise, return the peeled food.
 fn peel(food: Option<Food>) -> Option<Peeled> {
     match food {
-        Option::Some(food) => Option::Some(Peeled { food }),
-        Option::None => Option::None,
+        Some(food) => Some(Peeled { food }),
+        None => None,
     }
 }
 
@@ -33,8 +33,8 @@ fn peel(food: Option<Food>) -> Option<Peeled> {
 // Otherwise, return the chopped food.
 fn chop(peeled: Option<Peeled>) -> Option<Chopped> {
     match peeled {
-        Option::Some(Peeled { food }) => Option::Some(Chopped { food }),
-        Option::None => Option::None,
+        Some(Peeled { food }) => Some(Chopped { food }),
+        None => None,
     }
 }
 
@@ -55,15 +55,15 @@ fn process(food: Option<Food>) -> Option<Cooked> {
 // Check whether there's food or not before trying to eat it!
 fn eat(food: Option<Cooked>) {
     match food {
-        Option::Some(food) => println!("Mmm. I love {:?}", food),
-        Option::None => println!("Oh no! It wasn't edible."),
+        Some(food) => println!("Mmm. I love {:?}", food),
+        None => println!("Oh no! It wasn't edible."),
     }
 }
 
 fn main() {
-    let apple = Option::Some(Food::Apple);
-    let carrot = Option::Some(Food::Carrot);
-    let potato = Option::None;
+    let apple = Some(Food::Apple);
+    let carrot = Some(Food::Carrot);
+    let potato = None;
 
     let cooked_apple = cook(chop(peel(apple)));
     let cooked_carrot = cook(chop(peel(carrot)));

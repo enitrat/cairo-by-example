@@ -23,7 +23,7 @@ fn main() {
             acc += n_squared;
         }
         n += 1;
-    };
+    }
     println!("imperative style: {}", acc);
 
     // Assumption: we can use the range (0..1000) because we know 1000^2 > 1000

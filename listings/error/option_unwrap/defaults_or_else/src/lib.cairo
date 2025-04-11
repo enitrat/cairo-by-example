@@ -8,17 +8,15 @@ enum Fruit {
 }
 
 fn main() {
-    let no_fruit: Option<Fruit> = Option::None;
-    let get_kiwi_as_fallback = 
-        || {
-            println!("Providing kiwi as fallback");
-            Option::Some(Fruit::Kiwi)
-        };
-    let get_lemon_as_fallback = 
-        || {
-            println!("Providing lemon as fallback");
-            Option::Some(Fruit::Lemon)
-        };
+    let no_fruit: Option<Fruit> = None;
+    let get_kiwi_as_fallback =  || {
+        println!("Providing kiwi as fallback");
+        Some(Fruit::Kiwi)
+    };
+    let get_lemon_as_fallback =  || {
+        println!("Providing lemon as fallback");
+        Some(Fruit::Lemon)
+    };
 
     let first_available_fruit = no_fruit
         .or_else( || get_kiwi_as_fallback())

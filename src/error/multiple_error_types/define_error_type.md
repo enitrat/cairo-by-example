@@ -8,11 +8,11 @@ Cairo allows us to define our own error types. In general, a "good" error type:
 - Represents different errors with the same type
 - Presents nice error messages to the user
 - Is easy to compare with other types
-  - Good: `Result::Err(EmptyArray)`
-  - Bad: `Result::Err("Please use an array with at least one element")`
+  - Good: `Err(EmptyArray)`
+  - Bad: `Err("Please use an array with at least one element")`
 - Can hold information about the error
-  - Good: `Result::Err(BadChar(c, position))`
-  - Bad: `Result::Err("+ cannot be used here")`
+  - Good: `Err(BadChar(c, position))`
+  - Bad: `Err("+ cannot be used here")`
 - Composes well with other errors
 
 ```cairo,editable

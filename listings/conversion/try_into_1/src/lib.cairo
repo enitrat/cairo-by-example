@@ -6,9 +6,9 @@ struct EvenNumber {
 impl U32IntoEvenNumber of TryInto<u32, EvenNumber> {
     fn try_into(self: u32) -> Option<EvenNumber> {
         if self % 2 == 0 {
-            Option::Some(EvenNumber { value: self })
+            Some(EvenNumber { value: self })
         } else {
-            Option::None
+            None
         }
     }
 }
