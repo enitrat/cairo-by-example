@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2024_07"
 
 [dev-dependencies]
-snforge_std = "0.38.3"
-assert_macros = "2.11.2"
+snforge_std = "0.39.0"
+assert_macros = "2.11.4"
 
 [[target.starknet-contract]]
 sierra = true
