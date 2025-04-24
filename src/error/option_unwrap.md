@@ -27,4 +27,4 @@ controlled result while retaining the option to `panic` if desired.
 {{#include ../../listings/error/option_unwrap/src/lib.cairo}}
 ```
 
-[expect]: https://docs.cairo-lang.org/std/option/enum.Option.html#method.expect
+[expect]: https://docs.cairo-lang.org/core/core-option-OptionTrait.html#expect

@@ -22,5 +22,5 @@ File `src/lib.cairo`:
 
 [Scarb][scarb] docs on specifying dependencies.
 
-[unit-testing]: testing/unit_testing.md
+[unit-testing]: ./unit_testing.md
 [scarb]: https://docs.swmansion.com/scarb/docs/reference/specifying-dependencies.html

@@ -24,4 +24,4 @@ want to rename it.
 
 [match]: ../flow_control/match.md
 [fn]: ../fn.md
-[str]: ../core/bytearray.md
+[str]: ../core/bytearrays.md
