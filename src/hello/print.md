@@ -37,8 +37,8 @@ for these types. To print text for custom types, more steps are required.
 [`std::fmt`][fmt], [`macros`][macros], [`struct`][structs], [`traits`][traits]
 
 [fmt]: https://docs.swmansion.com/scarb/corelib/core-fmt.html
-[macros]: ../macros.md
-[bytearray]: ../core/bytearray.md
+[macros]: https://book.cairo-lang.org/ch12-05-macros.html?#macros
+[bytearray]: ../core/bytearrays.md
 [structs]: ../custom_types/structs.md
 [traits]: https://docs.swmansion.com/scarb/corelib/core-fmt.html#traits
 [attribute]: ../attribute.md

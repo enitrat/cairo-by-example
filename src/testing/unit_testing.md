@@ -59,6 +59,6 @@ with command `scarb test -- --ignored`
 ```
 
 [attribute]: ../attribute.md
-[macros]: ../macros.md
+[macros]: https://book.cairo-lang.org/ch12-05-macros.html?#macros
 [mod]: ../mod.md
 [panic]: ../error/panic.md

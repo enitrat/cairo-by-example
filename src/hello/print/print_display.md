@@ -51,7 +51,7 @@ Debug: Complex { real: 3, imag: 7 }
 
 [derive]: ../../trait/derive.md
 [fmt]: https://docs.swmansion.com/scarb/corelib/core-fmt.html
-[macros]: ../../macros.md
+[macros]: https://book.cairo-lang.org/ch12-05-macros.html?#macros
 [structs]: ../../custom_types/structs.md
 [traits]: ../../trait.md
 [use]: ../../mod/use.md
